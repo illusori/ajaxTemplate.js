@@ -9,7 +9,7 @@
 
 var ajaxTemplate = {
 
-    Version: '1.0.0.1',
+    Version: '1.0.0.2',
 
     validActions: $w('replace append show hide'),
 
@@ -53,13 +53,12 @@ alert( 'unknown action' );
             }
             else
             {
-                //  Default target is span/div with same ajt:name attribute
+                //  Default target is element with same ajt:name attribute
                 //  as prop
                 var attr = '[ajt:name=\'' + prop + '\']';
-                targets = fragmentNode.select(
-                    'SPAN' + attr + ', DIV' + attr );
+                targets = fragmentNode.select( attr );
 //alert( 'default search for ' +
-//  'SPAN[ajt:name=\'' + prop + '\']' +
+//  '[ajt:name=\'' + prop + '\']' +
 //  ' found ' + target );
             }
 
